@@ -114,7 +114,6 @@ header{
             }
             .chart{
                 height: 3rem;
-                background-color: pink;
             }
         }
     }
@@ -126,6 +125,26 @@ header{
     .no-hd{
         position: relative;
         border: 1px solid rgba(25, 186, 139, 0.17);
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 10px;
+            border-top:2px solid #02a6b5;
+            border-left:2px solid #02a6b5;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 10px;
+            border-right:2px solid #02a6b5;
+            border-bottom:2px solid #02a6b5;
+        }
         ul{
             display: flex;
             list-style: none;
@@ -138,7 +157,31 @@ header{
                 color: #ffeb7b;
                 text-align: center;
                 font-family: 'electronicFont';
+                &:first-child::after{
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top:25%;
+                    width:1px;
+                    height:50%;
+                    background: rgba(255, 255, 255, 0.2);
+                }
             }
         }
+    }
+    .no-bd{
+        ul{
+            display: flex;
+            li{
+                flex: 1;
+                text-align: center;
+                padding-top: 0.125rem;
+                height: 0.5rem;
+                font-style: 0.225rem;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+        height: .5rem;
+       
     }
 }

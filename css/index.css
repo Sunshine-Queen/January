@@ -114,7 +114,6 @@ header .showTime {
 }
 .mainbox .column .panel .chart {
   height: 3rem;
-  background-color: pink;
 }
 .no {
   background-color: rgba(101, 132, 226, 0.1);
@@ -123,6 +122,26 @@ header .showTime {
 .no .no-hd {
   position: relative;
   border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.no .no-hd::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+}
+.no .no-hd::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
 }
 .no .no-hd ul {
   display: flex;
@@ -137,4 +156,27 @@ header .showTime {
   color: #ffeb7b;
   text-align: center;
   font-family: 'electronicFont';
+}
+.no .no-hd ul li:first-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25%;
+  width: 1px;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.no .no-bd {
+  height: 0.5rem;
+}
+.no .no-bd ul {
+  display: flex;
+}
+.no .no-bd ul li {
+  flex: 1;
+  text-align: center;
+  padding-top: 0.125rem;
+  height: 0.5rem;
+  font-style: 0.225rem;
+  color: rgba(255, 255, 255, 0.7);
 }
